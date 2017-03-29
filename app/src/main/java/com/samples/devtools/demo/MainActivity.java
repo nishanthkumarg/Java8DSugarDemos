@@ -1,9 +1,12 @@
 package com.samples.devtools.demo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+
+import com.samples.devtools.demo.features.LambdaTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void onItemClick(DemoItem demoItem) {
         switch (demoItem.getTitle()){
             case DemoItem.LAMBDAS:
-
+                startActivity(new Intent(this, LambdaTest.class));
                 break;
             case DemoItem.METHOD_REFERENCES:
                 break;
