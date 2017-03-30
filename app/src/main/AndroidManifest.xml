@@ -20,6 +20,8 @@
             android:label="@string/lambdas_title"/>
         <activity android:name=".features.MethodReferencesTest"
             android:label="@string/method_reference_title"></activity>
+
+       <activity android:name=".features.RepeatedAnnotationActivity"></activity>
     </application>
 
 </manifest>

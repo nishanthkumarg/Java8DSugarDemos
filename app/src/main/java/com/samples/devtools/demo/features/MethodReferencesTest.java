@@ -33,8 +33,8 @@ public class MethodReferencesTest extends AppCompatActivity {
         System.out.println("Prime Numbers are " + primeNumbersLambda);
 
         //Method reference
-        List primeNumbersMethodReference = findPrimeNumbers(numbers, MethodReferencesTest::isPrime);
-        System.out.println("Prime Numbers are " + primeNumbersLambda);
+      //  List primeNumbersMethodReference = findPrimeNumbers(numbers, MethodReferencesTest::isPrime);
+      //  System.out.println("Prime Numbers are " + primeNumbersLambda);
     }
 
     //Function to describe reference to constructor method
