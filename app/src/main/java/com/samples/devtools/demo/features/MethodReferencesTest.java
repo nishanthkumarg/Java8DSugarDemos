@@ -27,9 +27,9 @@ public class MethodReferencesTest extends AppCompatActivity {
     //Function to describe reference to static method
     private void referenceToStaticMethodExample() {
 
-        List numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16);
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16);
         //Lambda Expression From
-        List primeNumbersLambda = findPrimeNumbers(numbers, (number) -> isPrime((int) number));
+        List<Integer> primeNumbersLambda = findPrimeNumbers(numbers, (number) -> isPrime(number));
         System.out.println("Prime Numbers are " + primeNumbersLambda);
 
         //Method reference
@@ -78,29 +78,6 @@ public class MethodReferencesTest extends AppCompatActivity {
         MethodReferencesTest.printNames(names,System.out::println);
     }
 
-    public static boolean isPrime(int number) {
-        if (number == 1) {
-            return false;
-        }
-        for (int i = 2; i < number; i++)
-        {
-            if (number % i == 0)
-            {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public static List findPrimeNumbers(List list, Predicate predicate)
-    {
-        List sortedNumbers = new ArrayList();
-        list.stream().filter((i) -> (predicate.test(i))).forEach((i) ->
-        {
-            sortedNumbers.add(i);
-        });
-        return sortedNumbers;
-    }
 
     private static void printNames(List list, Consumer c ){
         list.forEach(x -> c.accept(x));
@@ -119,7 +96,29 @@ public class MethodReferencesTest extends AppCompatActivity {
         return result;
     }
 
+    public static boolean isPrime(int number) {
+        if (number == 1) {
+            return false;
+        }
+        for (int i = 2; i < number; i++)
+        {
+            if (number % i == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 
+    public static List findPrimeNumbers(List<Integer> list, Predicate<Integer> predicate)
+    {
+        List<Integer> sortedNumbers = new ArrayList<>();
+        list.stream().filter((i) -> (predicate.test(i))).forEach((i) ->
+        {
+            sortedNumbers.add(i);
+        });
+        return sortedNumbers;
+    }
 
 
 
