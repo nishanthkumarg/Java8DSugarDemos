@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.samples.devtools.demo.features.LambdaTest;
+import com.samples.devtools.demo.features.MethodReferencesTest;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, LambdaTest.class));
                 break;
             case DemoItem.METHOD_REFERENCES:
+                startActivity(new Intent(this, MethodReferencesTest.class));
                 break;
             case DemoItem.TYPE_ANNOTATIONS:
                 break;

@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Java8DSugarDemos</string>
     <string name="btn_action_name">Test</string>
+    <string name="lambdas_title">Lambdas</string>
+    <string name="method_reference_title">Method References</string>
+    <string name="step_over_text">Step-Over</string>
+    <string name="step_in_text">Step-In</string>
+
 </resources>

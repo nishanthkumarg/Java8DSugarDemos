@@ -6,4 +6,27 @@
     android:layout_height="match_parent"
     tools:context="com.samples.devtools.demo.features.LambdaTest">
 
+    <Button
+        android:id="@+id/btn_step_over"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/step_over_text"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp" />
+
+    <Button
+        android:id="@+id/btn_step_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/step_in_text"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_step_over"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="8dp" />
 </android.support.constraint.ConstraintLayout>
