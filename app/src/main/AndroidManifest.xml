@@ -16,12 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".features.LambdaTest"
-            android:label="@string/lambdas_title"/>
-        <activity android:name=".features.MethodReferencesTest"
-            android:label="@string/method_reference_title"></activity>
-
-       <activity android:name=".features.RepeatedAnnotationActivity"></activity>
+        <activity
+            android:name=".features.LambdaTest"
+            android:label="@string/lambdas_title" />
+        <activity
+            android:name=".features.MethodReferencesTest"
+            android:label="@string/method_reference_title" />
+        <activity android:name=".features.RepeatedAnnotationActivity" />
+        <activity android:name=".features.databinding.DatabindingTest"/>
     </application>
 
 </manifest>

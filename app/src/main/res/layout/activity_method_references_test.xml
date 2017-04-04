@@ -5,5 +5,78 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.samples.devtools.demo.features.MethodReferencesTest">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/reference_to_static_method"/>
+            <TextView
+                android:id="@+id/integer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/integer_list"/>
+            <TextView
+                android:id="@+id/static_mf_lambda_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/prime_numbers_using_lambda_form"/>
+            <TextView
+                android:id="@+id/static_mf_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="@string/prime_numbers_using_method_reference"/>
+
+            <TextView
+                android:id="@+id/cons_integer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:text="@string/reference_to_constructor"/>
+            <TextView
+                android:id="@+id/ref_integer_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/integer_list"/>
+            <TextView
+                android:id="@+id/constructor_mf_lambda_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/square_root_using_lambda_form"/>
+            <TextView
+                android:id="@+id/constructor_mf_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:text="@string/square_root_using_constuctor_reference"/>
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>

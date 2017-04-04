@@ -3,6 +3,7 @@ package com.samples.devtools.demo.features;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.samples.devtools.demo.R;
 
@@ -15,42 +16,63 @@ import java.util.function.Predicate;
 
 public class MethodReferencesTest extends AppCompatActivity {
 
+    private TextView static_integer_list;
+    private TextView static_lambda_form;
+    private TextView static_mf_form;
+    private TextView cons_integer_list;
+    private TextView cons_lambda_form;
+    private TextView cons_reference_form;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_method_references_test);
+        static_integer_list = (TextView)findViewById(R.id.integer_list);
+        static_lambda_form = (TextView)findViewById(R.id.static_mf_lambda_form);
+        static_mf_form = (TextView)findViewById(R.id.static_mf_form);
+
+        cons_integer_list = (TextView)findViewById(R.id.cons_integer_list);
+        cons_lambda_form = (TextView)findViewById(R.id.constructor_mf_lambda_form);
+        cons_reference_form = (TextView)findViewById(R.id.constructor_mf_form);
+
         referenceToStaticMethodExample();
         referenceToConstructor();
         referenceToInstanceMethodAOPT();
+        referenceToInstanceMethodOAPO();
     }
 
     //Function to describe reference to static method
     private void referenceToStaticMethodExample() {
 
         List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 15, 16);
+        static_integer_list.setText(static_integer_list.getText()+": \n"+ numbers.toString());
+
         //Lambda Expression From
         List<Integer> primeNumbersLambda = findPrimeNumbers(numbers, (number) -> isPrime(number));
-        System.out.println("Prime Numbers are " + primeNumbersLambda);
+        static_lambda_form.setText(static_lambda_form.getText()+": \n"+primeNumbersLambda.toString());
 
         //Method reference
-      //  List primeNumbersMethodReference = findPrimeNumbers(numbers, MethodReferencesTest::isPrime);
-      //  System.out.println("Prime Numbers are " + primeNumbersLambda);
+        List<Integer> primeNumbersMethodReference = findPrimeNumbers(numbers, MethodReferencesTest::isPrime);
+        static_mf_form.setText(static_mf_form.getText()+": \n"+primeNumbersMethodReference.toString());
     }
 
     //Function to describe reference to constructor method
     public void referenceToConstructor() {
 
         List  numbers = Arrays.asList(4,9,16,25,36);
-        //Reference to constructor
-        List squaredNumbers = MethodReferencesTest.findSquareRoot(numbers,Integer::new);
-        System.out.println("Square root of numbers = "+squaredNumbers);
+        cons_integer_list.setText(cons_integer_list.getText()+": \n"+numbers.toString());
 
         //Lambda Form
         List squaredLambdaNumbers = MethodReferencesTest.findSquareRoot(numbers,x->new Integer(x));
-        System.out.println("Square root of numbers = "+squaredLambdaNumbers);
+        cons_lambda_form.setText(cons_lambda_form.getText()+": \n"+squaredLambdaNumbers.toString());
+
+        //Reference to constructor
+        List squaredNumbers = MethodReferencesTest.findSquareRoot(numbers,Integer::new);
+        cons_reference_form.setText(cons_reference_form.getText()+": \n"+squaredNumbers.toString());
+
     }
 
-    //Reference ro an instance Method of an arbitary boject of a particular type
+    //Reference to an instance Method of an arbitrary object of a particular type
     public void referenceToInstanceMethodAOPT(){
         List persons = new ArrayList();
         persons.add(new Person("Albert", 80));
@@ -77,6 +99,13 @@ public class MethodReferencesTest extends AppCompatActivity {
 
         MethodReferencesTest.printNames(names,System.out::println);
     }
+
+
+
+
+
+
+
 
 
     private static void printNames(List list, Consumer c ){

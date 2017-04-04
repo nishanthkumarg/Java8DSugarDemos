@@ -5,10 +5,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.samples.devtools.demo.features.LambdaTest;
 import com.samples.devtools.demo.features.MethodReferencesTest;
+import com.samples.devtools.demo.features.RepeatedAnnotationActivity;
+import com.samples.devtools.demo.features.databinding.DatabindingTest;
 
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,10 +37,13 @@ public class MainActivity extends AppCompatActivity {
         demos.add(new DemoItem(DemoItem.TRY_WITH_RESOURCES));
         demos.add(new DemoItem(DemoItem.JAVA_TIME_API));
         demos.add(new DemoItem(DemoItem.INSTANT_RUN));
+        demos.add(new DemoItem(DemoItem.DATA_BINDING));
         adapter = new RecyclerViewAdapter(this,demos);
         recyclerView.setAdapter(adapter);
 
+
     }
+
 
     public void onItemClick(DemoItem demoItem) {
         switch (demoItem.getTitle()){
@@ -49,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
             case DemoItem.TYPE_ANNOTATIONS:
                 break;
             case DemoItem.REPEATING_ANNOTATIONS:
+                startActivity(new Intent(this, LambdaTest.class));
                 break;
             case DemoItem.STATIC_INTERFACE_METHODS:
                 break;
@@ -61,6 +69,9 @@ public class MainActivity extends AppCompatActivity {
             case DemoItem.JAVA_TIME_API:
                 break;
             case DemoItem.INSTANT_RUN:
+                break;
+            case DemoItem.DATA_BINDING:
+                startActivity(new Intent(this, DatabindingTest.class));
                 break;
         }
     }

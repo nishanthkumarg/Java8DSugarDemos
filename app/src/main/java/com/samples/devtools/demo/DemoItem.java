@@ -20,6 +20,7 @@ public class DemoItem {
     static final String TRY_WITH_RESOURCES = "Try-with-resources";
     static final String JAVA_TIME_API = "Java.time API";
     static final String INSTANT_RUN = "Instant Run";
+    static final String DATA_BINDING = "Data Binding";
     /*@Retention(RetentionPolicy.RUNTIME)
     public @interface Demos{
         Samples[] value() default {};

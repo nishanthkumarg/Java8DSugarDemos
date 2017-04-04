@@ -5,5 +5,24 @@
     <string name="method_reference_title">Method References</string>
     <string name="step_over_text">Step-Over</string>
     <string name="step_in_text">Step-In</string>
+    <string name="reference_to_static_method">Reference to Static Method</string>
+    <string name="reference_to_constructor">Reference To Constructor</string>
+    <string name="integer_list">Integer List</string>
+    <string name="prime_numbers_using_lambda_form">Prime numbers using Lambda Form</string>
+    <string name="prime_numbers_using_method_reference">Prime numbers using Method reference</string>
+    <string name="square_root_using_lambda_form">Square root using Lambda form</string>
+    <string name="square_root_using_constuctor_reference">Square root using Constuctor reference</string>
+
+    <string name="translate_button_text">Translate</string>
+    <string name="phoneword_label_text">Enter a phoneword:</string>
+    <string name="default_text">1-855-ANDROID</string>
+    <string name="call_button_text">Call</string>
+    <string name="cancel_text">Cancel</string>
+    <string name="title_activity_translate_log">Call Log</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="call_log_button_text">Call Log</string>
+    <string name="call_log_list_text">Numbers Called:</string>
+    <string name="action_call_log">Call Log</string>
 
 </resources>
