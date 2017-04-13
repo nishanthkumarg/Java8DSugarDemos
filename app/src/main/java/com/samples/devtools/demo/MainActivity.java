@@ -7,9 +7,11 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.samples.devtools.demo.features.DefaultInterfaceTest;
 import com.samples.devtools.demo.features.LambdaTest;
 import com.samples.devtools.demo.features.MethodReferencesTest;
 import com.samples.devtools.demo.features.RepeatedAnnotationActivity;
+import com.samples.devtools.demo.features.StreamsTest;
 import com.samples.devtools.demo.features.databinding.DatabindingTest;
 
 import java.lang.reflect.Method;
@@ -59,8 +61,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(this, LambdaTest.class));
                 break;
             case DemoItem.STATIC_INTERFACE_METHODS:
+                startActivity(new Intent(this, DefaultInterfaceTest.class));
                 break;
             case DemoItem.STREAM_API:
+                startActivity(new Intent(this, StreamsTest.class));
                 break;
             case DemoItem.REQUIRE_NON_NULL:
                 break;

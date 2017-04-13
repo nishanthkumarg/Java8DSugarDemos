@@ -25,4 +25,16 @@
     <string name="call_log_list_text">Numbers Called:</string>
     <string name="action_call_log">Call Log</string>
 
+    <!-- Strings for Streams Test -->
+    <string name="streams_filter_title">Testing filter in streams</string>
+    <string name="streams_collector_title">Testing Collector and String Joiner</string>
+    <string name="streams_flatmap_title">Testing FlatMaps</string>
+    <string name="streams_test_title">Testing Stream Operations</string>
+    <string name="test_parallel_stream_title">Test Parallel Stream</string>
+
+    <!-- Strings for Interface Test -->
+    <string name="default_interface_heading">Defaut and Static Interface Test</string>
+    <string name="default_interface_test_title">Default Interface</string>
+    <string name="static_interface_title">Static Interface</string>
+
 </resources>
